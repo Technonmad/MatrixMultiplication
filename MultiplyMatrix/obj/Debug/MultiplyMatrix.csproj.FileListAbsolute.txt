@@ -1,0 +1,10 @@
+C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\bin\Debug\MultiplyMatrix.exe.config
+C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\bin\Debug\MultiplyMatrix.exe
+C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\bin\Debug\MultiplyMatrix.pdb
+C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\obj\Debug\MultiplyMatrix.csprojAssemblyReference.cache
+C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\obj\Debug\MultiplyMatrix.Form1.resources
+C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\obj\Debug\MultiplyMatrix.Properties.Resources.resources
+C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\obj\Debug\MultiplyMatrix.csproj.GenerateResource.cache
+C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\obj\Debug\MultiplyMatrix.csproj.CoreCompileInputs.cache
+C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\obj\Debug\MultiplyMatrix.exe
+C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\obj\Debug\MultiplyMatrix.pdb
