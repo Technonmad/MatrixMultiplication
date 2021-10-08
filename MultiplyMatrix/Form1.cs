@@ -23,6 +23,7 @@ namespace MultiplyMatrix
         {
             warningLabel.Visible = false;
             calculateButton.Enabled = false;
+            multiply.makeThreads(mat);
         }
 
         private void createButton_Click(object sender, EventArgs e)
