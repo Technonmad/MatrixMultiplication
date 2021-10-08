@@ -5,12 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Threading;
 
 namespace MultiplyMatrix
 {
     class Multiply
     {
         int tmp = 0;
+        int row = 0;
+        TextBox[,] d = new TextBox[int.MaxValue, int.MaxValue];
         public int checkValues(TextBox[,] textBox1, TextBox[,] textBox2, Label label)
         {
             int flag = 0;
@@ -50,6 +53,14 @@ namespace MultiplyMatrix
             return c;
         }
 
+        public TextBox[,] threadMultiply(TextBox[,] textbox1, TextBox[,] textbox2)
+        {
+            
+
+            row += 4;
+            return d;
+        }
+
         public void showNewMatrix(TextBox[,] c, Panel panel3)
         {
             panel3.Controls.Clear();
@@ -61,6 +72,21 @@ namespace MultiplyMatrix
                     panel3.Controls.Add(c[i, j]);
                 }
             }
+        }
+
+        public void makeThreads(TextBox[,] textbox1, TextBox[,] textbox2)
+        {
+            
+            Thread thread1 = new Thread(() => threadMultiply(textbox1, textbox2));
+            Thread thread2 = new Thread(() => threadMultiply(textbox1, textbox2));
+            Thread thread3 = new Thread(() => threadMultiply(textbox1, textbox2));
+            Thread thread4 = new Thread(() => threadMultiply(textbox1, textbox2));
+
+            thread1.Start();
+            thread2.Start();
+            thread3.Start();
+            thread4.Start();
+
         }
     }
 }
