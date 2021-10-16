@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,19 +24,24 @@ namespace MultiplyMatrix
         {
             warningLabel.Visible = false;
             calculateButton.Enabled = false;
-            multiply.makeThreads(mat);
+            label11.Visible = false;
+            label13.Visible = false;
         }
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            makeMatrixes.checkParameters(matrixPanel1, matrixPanel2, matrixPanel3, matrix1C, matrix1R, matrix2C, matrix2R, warningLabel, calculateButton);
+            makeMatrixes.checkParameters(matrixPanel1, matrixPanel2, matrixPanel3, ParalellPanel, matrix1C, matrix1R, matrix2C, matrix2R, warningLabel, calculateButton, checkBox1);
         }
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
-            makeMatrixes.multiply(matrixPanel3, warningLabel);
+
+            makeMatrixes.multiply(matrixPanel3, ParalellPanel, warningLabel, label11, label13);
         }
 
-       
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

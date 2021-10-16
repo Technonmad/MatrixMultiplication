@@ -8,3 +8,13 @@ C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\obj\Debug\MultiplyMatr
 C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\obj\Debug\MultiplyMatrix.csproj.CoreCompileInputs.cache
 C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\obj\Debug\MultiplyMatrix.exe
 C:\Users\Anton\source\repos\MultiplyMatrix\MultiplyMatrix\obj\Debug\MultiplyMatrix.pdb
+C:\Users\User\Documents\GitHub\MatrixMultiplication\MultiplyMatrix\obj\Debug\MultiplyMatrix.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\MatrixMultiplication\MultiplyMatrix\obj\Debug\MultiplyMatrix.Form1.resources
+C:\Users\User\Documents\GitHub\MatrixMultiplication\MultiplyMatrix\obj\Debug\MultiplyMatrix.Properties.Resources.resources
+C:\Users\User\Documents\GitHub\MatrixMultiplication\MultiplyMatrix\obj\Debug\MultiplyMatrix.csproj.GenerateResource.cache
+C:\Users\User\Documents\GitHub\MatrixMultiplication\MultiplyMatrix\obj\Debug\MultiplyMatrix.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\MatrixMultiplication\MultiplyMatrix\obj\Debug\MultiplyMatrix.exe
+C:\Users\User\Documents\GitHub\MatrixMultiplication\MultiplyMatrix\obj\Debug\MultiplyMatrix.pdb
+C:\Users\User\Documents\GitHub\MatrixMultiplication\MultiplyMatrix\bin\Debug\MultiplyMatrix.exe.config
+C:\Users\User\Documents\GitHub\MatrixMultiplication\MultiplyMatrix\bin\Debug\MultiplyMatrix.exe
+C:\Users\User\Documents\GitHub\MatrixMultiplication\MultiplyMatrix\bin\Debug\MultiplyMatrix.pdb

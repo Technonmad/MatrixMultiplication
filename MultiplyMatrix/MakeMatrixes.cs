@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,12 @@ namespace MultiplyMatrix
     {
         int matrix1Columns, matrix1Rows, matrix2Columns, matrix2Rows;
         TextBox[,] textboxArray1, textboxArray2;
+        Random rand = new Random();
+        String newRand;
 
-        public void checkParameters(Panel panel1, Panel panel2, Panel panel3, TextBox textBox1,
-            TextBox textBox2, TextBox textBox3, TextBox textBox4, Label label, Button btn)
+
+        public void checkParameters(Panel panel1, Panel panel2, Panel panel3, Panel panel4,TextBox textBox1,
+            TextBox textBox2, TextBox textBox3, TextBox textBox4, Label label, Button btn, CheckBox checkBox)
         {
             
             btn.Enabled = false;
@@ -38,7 +42,7 @@ namespace MultiplyMatrix
                 }
                 else
                 {
-                    makeSomeMatrixes(panel1, panel2, panel3, textBox1, textBox2, textBox3, textBox4, label);
+                    makeSomeMatrixes(panel1, panel2, panel3, panel4, textBox1, textBox2, textBox3, textBox4, label, checkBox);
                     label.Visible = false;
                     btn.Enabled = true;
                 }     
@@ -52,12 +56,13 @@ namespace MultiplyMatrix
             }
         }
 
-        public void makeSomeMatrixes(Panel panel1, Panel panel2, Panel panel3, TextBox textBox1,
-            TextBox textBox2, TextBox textBox3, TextBox textBox4, Label label)
+        public void makeSomeMatrixes(Panel panel1, Panel panel2, Panel panel3, Panel panel4,TextBox textBox1,
+            TextBox textBox2, TextBox textBox3, TextBox textBox4, Label label, CheckBox checkBox)
         {
             panel1.Controls.Clear();
             panel2.Controls.Clear();
             panel3.Controls.Clear();
+            panel4.Controls.Clear();
             try
             {
                 matrix1Columns = Convert.ToInt32(textBox1.Text);
@@ -90,8 +95,27 @@ namespace MultiplyMatrix
                         panel2.Controls.Add(textboxArray2[i, j]);
                     }
                 }
+                if (checkBox.Checked)
+                {
+                    for (int i = 0; i < matrix1Columns; i++)
+                    {
+                        for (int j = 0; j < matrix1Rows; j++)
+                        {
+                            newRand = Convert.ToString(rand.Next(0, 100));
+                            textboxArray1[i, j].Text = newRand;
+                        }
+                    }
+                    for (int i = 0; i < matrix2Columns; i++)
+                    {
+                        for (int j = 0; j < matrix2Rows; j++)
+                        {
+                            newRand = Convert.ToString(rand.Next(0, 100));
+                            textboxArray2[i, j].Text = newRand;
+                        }
+                    }
+                }
             }
-            catch
+            catch(Exception)
             {
                 label.Text = "Заполните поля!";
                 label.ForeColor = Color.Red;
@@ -101,23 +125,27 @@ namespace MultiplyMatrix
            
         }
 
-        public void multiply(Panel panel3, Label label)
+        public void multiply(Panel panel3, Panel panel4, Label label1, Label label2, Label label3)
         {
             try
-            {
+           {
                 Multiply mlt = new Multiply();
-                if (mlt.checkValues(textboxArray1, textboxArray2, label) == 1)
+                if (mlt.checkValues(textboxArray1, textboxArray2, label1) == 1)
                 {
-                    mlt.showNewMatrix(mlt.multiply(textboxArray1, textboxArray2), panel3);
-                    label.Visible = false;
+                    mlt.showNewMatrix(mlt.multiply(textboxArray1, textboxArray2, label2), panel3);
+
+                    mlt.showNewMatrix(mlt.makeThreads(textboxArray1, textboxArray2, label3), panel4);
+
+                    label1.Visible = false;
                 }
             }
             catch
             {
-                label.Text = "Заполните матрицы!";
-                label.ForeColor = Color.Red;
-                label.Visible = true;
+                label1.Text = "Заполните матрицы!";
+                label1.ForeColor = Color.Red;
+                label1.Visible = true;
             }
         }
+
     }
 }
