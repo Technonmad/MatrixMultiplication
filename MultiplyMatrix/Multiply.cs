@@ -78,9 +78,10 @@ namespace MultiplyMatrix
             }
         }
 
+        //массивы вместо текстбоксов
         public void threadMultiply(TextBox[,] textbox1, TextBox[,] textbox2, int a, int b, TextBox[,] d)
         {
-            lock (locker)
+            lock (locker) //можно будет убрать
             {
                 for (int i = a; i < b; i++)
                 {
